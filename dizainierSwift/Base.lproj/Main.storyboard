@@ -23,8 +23,11 @@
                                     <action selector="changeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="gfg-3q-EPJ"/>
                                 </connections>
                             </stepper>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MmK-Qg-5SR">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MmK-Qg-5SR">
                                 <rect key="frame" x="525" y="30" width="51" height="31"/>
+                                <connections>
+                                    <action selector="changeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="xX5-dK-FSB"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geek mode" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzf-ea-nFG">
                                 <rect key="frame" x="426" y="35" width="89" height="21"/>
@@ -64,20 +67,29 @@
                                     <segment title="8"/>
                                     <segment title="9"/>
                                 </segments>
+                                <connections>
+                                    <action selector="changeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="NW8-M3-Dci"/>
+                                </connections>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YHr-rK-AfH">
-                                <rect key="frame" x="36" y="238" width="528" height="39"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YHr-rK-AfH">
+                                <rect key="frame" x="36" y="227" width="528" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yz9-on-Ml9">
-                                <rect key="frame" x="31" y="333" width="528" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yz9-on-Ml9">
+                                <rect key="frame" x="36" y="286" width="528" height="30"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pfd-Fw-2q2"/>
+                                </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="egg-BQ-A8J">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="99" translatesAutoresizingMaskIntoConstraints="NO" id="egg-BQ-A8J">
                                 <rect key="frame" x="34" y="177" width="532" height="31"/>
+                                <connections>
+                                    <action selector="changeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="hW2-xs-2os"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -106,9 +118,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnReset" destination="yz9-on-Ml9" id="XDt-bw-18H"/>
+                        <outlet property="btnReset" destination="yz9-on-Ml9" id="vl3-xd-OdV"/>
                         <outlet property="segDix" destination="ie0-Gj-i8f" id="ZBM-bi-IdS"/>
                         <outlet property="segUnit" destination="VDj-Op-gT5" id="Vci-VL-PUz"/>
+                        <outlet property="sldValue" destination="egg-BQ-A8J" id="SJ3-aQ-pQb"/>
                         <outlet property="stpValue" destination="8ZF-Jc-bCJ" id="c06-Lv-swA"/>
                         <outlet property="swiGeek" destination="MmK-Qg-5SR" id="XP2-U9-7e0"/>
                         <outlet property="txtValue" destination="YHr-rK-AfH" id="uBN-Dh-x5y"/>
